@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShadowTools — Fix, Unlock & Manage Your Steam Library</title>
+  <meta name="description" content="ShadowTools is your all-in-one Steam toolkit: repair crashes, unlock games, add to your library and auto-sync to every PC." />
+  <link rel="icon" href="/favicon.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="landing">
+
+  <header class="landing-header">
+    <div class="landing-nav">
+      <a class="brand" href="/">
+        <img src="/logo.png" alt="ShadowTools" class="brand-logo" />
+        <div class="brand-text">
+          <span class="brand-name">ShadowTools</span>
+          <span class="brand-tag">by Shadowclutch</span>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="/app">Cloud Library</a>
+      </nav>
+      <div class="nav-cta">
+        <a class="btn btn-ghost" href="/app">Sign in</a>
+        <a class="btn btn-primary" href="#pricing">Buy license</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ══ HERO ══ -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <span class="badge badge-on">v3.1.1 · Windows 10 / 11</span>
+        <h1>Repair. Unlock. <span class="accent">Sync.</span></h1>
+        <p>
+          The complete Steam toolkit in one clean desktop app — fix crash errors,
+          unlock titles, add games from a 100k+ catalog, and keep every PC in sync automatically.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" href="/api/download?src=site">
+            <span class="btn-icon">⬇</span> Download ShadowTools
+          </a>
+          <a class="btn btn-ghost btn-lg" href="#pricing">Get a license →</a>
+        </div>
+        <div class="hero-stats">
+          <span id="downloadCount"><span class="spinner"></span> Checking downloads...</span>
+          <span class="dot">·</span>
+          <span>Zip password: <code>SHADOW</code></span>
+        </div>
+      </div>
+      <div class="hero-art">
+        <div class="app-mock">
+          <div class="mock-top">
+            <span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
+            <span class="mock-title">Shadowclutch</span>
+          </div>
+          <div class="mock-body">
+            <div class="mock-sidebar">
+              <span class="mock-item"></span><span class="mock-item"></span><span class="mock-item"></span><span class="mock-item"></span>
+            </div>
+            <div class="mock-main">
+              <div class="mock-bar"></div>
+              <div class="mock-cards">
+                <div class="mock-card"></div><div class="mock-card"></div><div class="mock-card"></div>
+                <div class="mock-card"></div><div class="mock-card"></div><div class="mock-card"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FEATURES ══ -->
+  <section class="features" id="features">
+    <h2 class="section-title">Everything you need</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🛠</div>
+        <h3>Steam Fixer</h3>
+        <p>Repairs Steam installation issues and crash errors with one click — automatically restarts Steam when done.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔓</div>
+        <h3>Unlock &amp; Adder</h3>
+        <p>Add games from a 100k+ CloudDB catalog and unlock titles straight into your library.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">☁️</div>
+        <h3>Cloud Sync</h3>
+        <p>Sign in once, and your library syncs to every PC — a background agent deploys new games automatically.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3>Bypasses &amp; Fixes</h3>
+        <p>Built-in fixes database and bypass tools for games that won't launch.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ PRICING ══ -->
+  <section class="pricing" id="pricing">
+    <h2 class="section-title">One-time payment · lifetime license</h2>
+    <p class="pricing-sub">Pay once, use forever. Your key never expires.</p>
+    <div class="price-card">
+      <h3>ShadowTools Pro</h3>
+      <div class="price"><span id="priceBase">₹300</span><span id="priceDisc" class="price-disc" style="display:none"></span></div>
+      <p class="price-caption" id="priceCaption">≈ $3.50 · one-time, no subscription</p>
+      <div class="coupon-box">
+        <input type="text" id="coupon-input" placeholder="Have a coupon? Enter code" spellcheck="false" autocomplete="off">
+        <button type="button" id="coupon-btn" class="btn btn-ghost">Apply</button>
+      </div>
+      <p class="coupon-msg" id="coupon-msg"></p>
+      <ul>
+        <li><span class="check">✓</span> Lifetime license key</li>
+        <li><span class="check">✓</span> All tools unlocked (fixer, adder, bypasses)</li>
+        <li><span class="check">✓</span> Cloud library sync on unlimited PCs</li>
+        <li><span class="check">✓</span> Free updates</li>
+      </ul>
+
+      <div class="pay-steps">
+        <div class="pay-step">
+          <div class="pay-step-num">1</div>
+          <div class="pay-step-body">
+            <b id="payStep1">Pay ₹300</b>
+            <span>Tap the Razorpay button below and pay with card, UPI or netbanking.</span>
+          </div>
+        </div>
+        <div class="pay-step">
+          <div class="pay-step-num">2</div>
+          <div class="pay-step-body">
+            <b>You're redirected to the success page</b>
+            <span>Your license key is generated and shown to you automatically.</span>
+          </div>
+        </div>
+        <div class="pay-step">
+          <div class="pay-step-num">3</div>
+          <div class="pay-step-body">
+            <b>Copy your key & activate</b>
+            <span>Open the app, paste your key, and you're set — it never expires.</span>
+          </div>
+        </div>
+      </div>
+
+      <h4 class="pay-title">Choose a payment method</h4>
+      <div class="pay-methods">
+        <div class="pay-method" id="razorpay-method">
+          <div class="pay-method-head">
+            <b>Razorpay</b>
+            <span class="pay-tag">Cards · UPI · Netbanking</span>
+          </div>
+          <a class="btn btn-primary razorpay-btn" id="razorpay-btn" href="https://razorpay.me/@utkarshmishra6595" target="_blank" rel="noopener">
+            Pay ₹<span id="rzpAmount">300</span> with Razorpay →
+          </a>
+          <span class="pay-method-note">Pay by card, UPI or netbanking on Razorpay's secure page — no account needed. Your key is issued instantly after payment.</span>
+        </div>
+        <div class="pay-method">
+          <div class="pay-method-head">
+            <b>Binance</b>
+            <span class="pay-tag coming-soon">Coming soon</span>
+          </div>
+          <span class="pay-method-note">USDT / crypto payments — international buyers. Wallet added soon.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ══ -->
+  <footer class="landing-footer">
+    <div class="footer-inner">
+      <div class="brand">
+        <img src="/logo.png" alt="ShadowTools" class="brand-logo" />
+        <div class="brand-text">
+          <span class="brand-name">ShadowTools</span>
+          <span class="brand-tag">Steam, but better</span>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="/app">Cloud Library</a>
+        <a href="/api/health">API status</a>
+        <a href="https://www.instagram.com/shadowclutch__" target="_blank" rel="noopener">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          Instagram
+        </a>
+      </div>
+      <p class="footer-copy">© 2026 ShadowTools · Shadowclutch. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    async function loadDownloadCount() {
+      try {
+        const r = await fetch('/api/download/count');
+        const d = await r.json();
+        if (d && d.total != null) {
+          const el = document.getElementById('downloadCount');
+          el.innerHTML = '⬇ <b>' + d.total.toLocaleString() + '</b> downloads so far';
+        }
+      } catch (e) {
+        const el = document.getElementById('downloadCount');
+        el.innerHTML = 'Free download · v3.1.1';
+      }
+    }
+    loadDownloadCount();
+
+    var BASE_PRICE = 300;
+    var appliedCoupon = '';
+    var couponBtn = document.getElementById('coupon-btn');
+    var couponInput = document.getElementById('coupon-input');
+    var couponMsg = document.getElementById('coupon-msg');
+    var priceBase = document.getElementById('priceBase');
+    var priceDisc = document.getElementById('priceDisc');
+    var priceCaption = document.getElementById('priceCaption');
+    var payStep1 = document.getElementById('payStep1');
+    var rzpAmount = document.getElementById('rzpAmount');
+
+    function setPrice(base, discount) {
+      if (discount > 0) {
+        priceBase.innerHTML = '<s>₹' + base.toLocaleString('en-IN') + '</s>';
+        priceDisc.style.display = 'inline';
+        priceDisc.textContent = ' ₹' + (base - discount).toLocaleString('en-IN');
+        payStep1.textContent = 'Pay ₹' + (base - discount).toLocaleString('en-IN');
+        if (rzpAmount) rzpAmount.textContent = (base - discount).toLocaleString('en-IN');
+      } else {
+        priceBase.textContent = '₹' + base.toLocaleString('en-IN');
+        priceDisc.style.display = 'none';
+        payStep1.textContent = 'Pay ₹' + base.toLocaleString('en-IN');
+        if (rzpAmount) rzpAmount.textContent = base.toLocaleString('en-IN');
+      }
+    }
+
+    function applyCoupon() {
+      var code = couponInput.value.trim().toUpperCase();
+      if (!code) { couponMsg.textContent = 'Enter a coupon code.'; couponMsg.className = 'coupon-msg err'; return; }
+      couponBtn.disabled = true;
+      fetch('/api/coupon/validate?code=' + encodeURIComponent(code))
+        .then(function (r) { return r.json(); })
+        .then(function (d) {
+          couponBtn.disabled = false;
+          if (d.ok) {
+            appliedCoupon = code;
+            couponMsg.textContent = 'Coupon applied — ' + (d.percent ? d.percent + '% off' : '₹' + d.amount + ' off') + '!';
+            couponMsg.className = 'coupon-msg ok';
+            setPrice(d.base, d.discount);
+          } else {
+            appliedCoupon = '';
+            couponMsg.textContent = d.error || 'Invalid coupon.';
+            couponMsg.className = 'coupon-msg err';
+            setPrice(BASE_PRICE, 0);
+          }
+        })
+        .catch(function () {
+          couponBtn.disabled = false;
+          couponMsg.textContent = 'Could not check coupon. Try again.';
+          couponMsg.className = 'coupon-msg err';
+        });
+    }
+    if (couponBtn) couponBtn.addEventListener('click', applyCoupon);
+    if (couponInput) couponInput.addEventListener('keydown', function (e) { if (e.key === 'Enter') applyCoupon(); });
+
+    var rzpBtn = document.getElementById('razorpay-btn');
+    if (rzpBtn) {
+      rzpBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        var fallback = rzpBtn.getAttribute('href');
+        fetch('/api/checkout/razorpay', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ coupon: appliedCoupon })
+        })
+          .then(function (r) { return r.json(); })
+          .then(function (d) {
+            if (d && d.ok && d.url) { window.open(d.url, '_blank', 'noopener'); }
+            else { window.open(fallback, '_blank', 'noopener'); }
+          })
+          .catch(function () { window.open(fallback, '_blank', 'noopener'); });
+      });
+    }
+  </script>
+</body>
+</html>
